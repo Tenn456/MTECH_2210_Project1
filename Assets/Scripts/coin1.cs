@@ -19,4 +19,14 @@ public class coin1 : MonoBehaviour
         //Makes the coin move down at a speed depending on the random value generated
         transform.Translate(0, 1f * - speed * Time.deltaTime, 0);
     }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
+
+
+    }
 }

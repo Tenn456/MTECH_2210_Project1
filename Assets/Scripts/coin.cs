@@ -28,4 +28,14 @@ public class coin : MonoBehaviour
         coinValue = v;
         valueText.text = coinValue.ToString();
     }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<player1>().Score(coinValue);
+            Destroy(gameObject);
+        }
+
+    }
 }
