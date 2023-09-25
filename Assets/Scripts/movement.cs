@@ -19,6 +19,11 @@ public class movement : MonoBehaviour
 
         float xInput = Input.GetAxis("Horizontal");
 
-        transform.Translate(speed * Time.deltaTime * xInput, 0, 0);
+        //If the game is not over, the player can move
+        if(GameObject.Find("Game Manager").GetComponent<gameManager1>().gameOver == false)
+        {
+            transform.Translate(speed * Time.deltaTime * xInput, 0, 0);
+        }
+        
     }
 }
