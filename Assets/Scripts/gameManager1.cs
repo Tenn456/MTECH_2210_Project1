@@ -30,7 +30,7 @@ public class gameManager1 : MonoBehaviour
 
         InvokeRepeating("SpawnBadCoin", 5, 3);
 
-        InvokeRepeating("SpawnThemeCoin", 8, 6);
+        InvokeRepeating("SpawnThemeCoin", 10, 8);
 
 
     }
