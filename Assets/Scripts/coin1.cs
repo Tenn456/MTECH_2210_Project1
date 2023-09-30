@@ -18,12 +18,20 @@ public class coin1 : MonoBehaviour
     {
         //Makes the coin move down at a speed depending on the random value generated
         transform.Translate(0, 1f * - speed * Time.deltaTime, 0);
+
+        //If the object goes too low, it is destroyed
+        if (transform.position.y <= -9)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
+        //if object collides with the player
         if (collision.gameObject.tag == "Player")
         {
+            //it is destroyed
             Destroy(gameObject);
         }
 

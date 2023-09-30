@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8633516319019385906}
   - component: {fileID: 4011567921336560924}
-  - component: {fileID: -8163312037593712137}
   - component: {fileID: -7331769297213896602}
+  - component: {fileID: 6057333544752030499}
+  - component: {fileID: 2010560051813886160}
   m_Layer: 0
   m_Name: Theme Coin
   m_TagString: Untagged
@@ -28,9 +29,9 @@ Transform:
   m_GameObject: {fileID: 5161045761735470409}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.71, y: -1.2232563, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 2.31, y: -1.2232563, z: 0}
+  m_LocalScale: {x: 0.58, y: 0.58, z: 0.58}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -73,10 +74,10 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1181546917
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.08395326, g: 1, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 299477fc7cf04ca4aab5795fd2b0aadc, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -86,8 +87,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &-8163312037593712137
-CircleCollider2D:
+--- !u!114 &-7331769297213896602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5161045761735470409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0b6eb5564ee134887eaab8626a2f75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  breakSound: {fileID: 8300000, guid: e9526c12e74c48748b67b0150767c563, type: 3}
+--- !u!61 &6057333544752030499
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -119,18 +134,36 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.5
---- !u!114 &-7331769297213896602
-MonoBehaviour:
+  m_Size: {x: 2, y: 2}
+  m_EdgeRadius: 0
+--- !u!95 &2010560051813886160
+Animator:
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5161045761735470409}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee0b6eb5564ee134887eaab8626a2f75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 20e07fa627140a047b84bb16742e920d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

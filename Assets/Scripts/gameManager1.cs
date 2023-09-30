@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class gameManager1 : MonoBehaviour
 {
@@ -9,9 +10,14 @@ public class gameManager1 : MonoBehaviour
     public GameObject badCoinPrefab;
     public GameObject themeCoinPrefab;
     public GameObject gameOverText;
+
+    public AudioSource audioSource;
+    public AudioClip death;
+
     private float widthValue = 8;
     private float heightValue = 6;
     public bool gameOver = false;
+    public bool musicOnce = false;
 
     // Start is called before the first frame update
     void Start()
@@ -36,12 +42,22 @@ public class gameManager1 : MonoBehaviour
     }
 
     public void Update()
-    {
+    {   
+        //if gameOver is true
         if(gameOver)
         {
+            //Stops all coins from spawning
             CancelInvoke();
 
+            //displays game over text
             gameOverText.SetActive(true);
+
+            //plays the game over sound once
+            if(!musicOnce)
+            {
+                audioSource.PlayOneShot(death);
+                musicOnce = true;
+            }
         }
     }
 
