@@ -33,7 +33,7 @@ public class score : MonoBehaviour
             //Sets the score text to ring, which has been translated into a string
             scoreText.text = rings.ToString();
             //Plays the ring collect sound effect
-            audioSource.PlayOneShot(ringCollect, 0.3f);
+            audioSource.PlayOneShot(ringCollect, 0.05f);
         }
     }
 }

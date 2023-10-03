@@ -7,6 +7,7 @@ public class movement : MonoBehaviour
     public float speed = 5;
     public Animator animator;
     public bool facingRight = true;
+    public float xInput;
     
     // Start is called before the first frame update
     void Start()
@@ -23,12 +24,11 @@ public class movement : MonoBehaviour
             //Movement Script
             Debug.Log(Input.GetAxisRaw("Horizontal"));
 
-            float xInput = Input.GetAxis("Horizontal");
+            xInput = Input.GetAxis("Horizontal");
 
             transform.Translate(speed * Time.deltaTime * xInput, 0, 0);
 
-            //For Animation
-            animator.SetFloat("Speed", Mathf.Abs(xInput));
+            
 
             //Calls Flip Function if Sonic is moving and is not facing to the right
             if (Input.GetAxis("Horizontal") > 0 && !facingRight)
@@ -45,11 +45,7 @@ public class movement : MonoBehaviour
 
         
 
-        //If the gameover bool is true, the moving animation stops
-        if (GameObject.Find("Game Manager").GetComponent<gameManager1>().gameOver == true)
-        {
-            animator.SetFloat("Speed", 0);
-        }
+        
 
         
 

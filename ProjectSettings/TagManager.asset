@@ -49,12 +49,12 @@ TagManager:
   - name: Ground
     uniqueID: 2278035425
     locked: 0
-  - name: Player
-    uniqueID: 1670246429
-    locked: 0
   - name: Collectables
     uniqueID: 1181546917
     locked: 0
   - name: UI
     uniqueID: 1890760255
+    locked: 0
+  - name: Player
+    uniqueID: 1670246429
     locked: 0
